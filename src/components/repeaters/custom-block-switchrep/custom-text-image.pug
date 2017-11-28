@@ -1,0 +1,26 @@
+.custom-text-image
+  div(v-for='(content, i) in props.groups')
+    .custom-text-image__section(v-if='i % 2')
+      .custom-text-image__section-left
+        .custom-text-image__section-background(:style="{ backgroundImage: 'url('+ content.image +')'}")
+      .custom-text-image__section-right
+        .custom-text-image__section-textbox
+          .custom-text-image__section-title
+            //- Icon(:name='content.icon')
+            | {{ content.title }}
+          .custom-text-image__section-body(v-html='content.body')
+            | {{ content.body }}
+    
+    .custom-text-image__section(v-else)
+      .custom-text-image__section-left2
+        .custom-text-image__section-textbox2
+          .custom-text-image__section-title2
+            //- Icon(:name='content.icon')
+            | {{ content.title }}
+          .custom-text-image__section-body2(v-html='content.body')
+            | {{ content.body }}
+      .custom-text-image__section-right2
+        .custom-text-image__section-background2(:style="{ backgroundImage: 'url('+ content.image +')'}")
+    .divider
+
+  

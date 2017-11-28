@@ -1,0 +1,18 @@
+.nav
+  position: fixed
+  float: left
+  z-index: 99999
+  background: $c8
+  width: 100%
+
+  @media screen and (min-width: $screen-sm)
+    display: block
+
+  &__container
+    @extend .container-fluid
+
+  //------
+
+  &__logo
+    margin: 1rem
+    width: 11rem

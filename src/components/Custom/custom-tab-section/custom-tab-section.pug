@@ -1,0 +1,33 @@
+.custom-tag-section
+  .custom-tag-section__container
+    .custom-tag-section__nav
+        .custom-tag-section__button-box(v-for='(item, i) in props' @click='showTab(i)')
+          a.custom-tag-section__button(:class="{ active: isTab === i }")
+            | {{ item.button }}
+        
+    .divider
+      
+    .custom-tag-section__body(v-if='this.isTab === 0')
+      .custom-tag-section__left
+        .custom-tag-section__image(:style="{ backgroundImage: 'url('+ props[0].image +')'}")
+      .custom-tag-section__right(v-html='props[0].body')
+        | {{ props[0].body }}
+        
+    .custom-tag-section__body(v-else-if='this.isTab === 1')
+      .custom-tag-section__left
+        .custom-tag-section__image(:style="{ backgroundImage: 'url('+ props[1].image +')'}")
+      .custom-tag-section__right(v-html='props[1].body')
+        | {{ props[1].body }}
+        
+    .custom-tag-section__body(v-else-if='this.isTab === 2')
+      .custom-tag-section__left
+        .custom-tag-section__image(:style="{ backgroundImage: 'url('+ props[2].image +')'}")
+      .custom-tag-section__right(v-html='props[2].body')
+        | {{ props[2].body }}
+        
+    .custom-tag-section__body(v-else)
+      .custom-tag-section__left
+        .custom-tag-section__image(:style="{ backgroundImage: 'url('+ props[3].image +')'}")
+      .custom-tag-section__right(v-html='props[3].body')
+        | {{ props[3].body }}
+            

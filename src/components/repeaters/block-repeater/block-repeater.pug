@@ -1,0 +1,7 @@
+.block-repeater
+  .block-repeater__container
+    .block-repeater__props(v-for='item in props')
+      .block-repeater__background(:style="{ backgroundImage: 'url('+ item.background +')'}")
+        router-link.block-repeater__link(:to='item.link')
+        .block-repeater__label
+          | {{ item.label }}

@@ -8,7 +8,11 @@ Vue.use(Vuex)
 const store = new Vuex.Store({
   state: {
     pages: {},
-    menu: {},
+    nav: {},
+    body: {},
+    types: {},
+    showModal: {},
+    modalContent: {},
     loading: true
   },
   mutations: mutations,

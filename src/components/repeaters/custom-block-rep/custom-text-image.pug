@@ -1,0 +1,17 @@
+.custom-lower-section
+  .custom-lower-section__header
+    | {{ props.header }}
+  div(v-for='content in props')
+    .custom-lower-section__section
+      .custom-lower-section__section-left
+        .custom-lower-section__section-background(:style="{ backgroundImage: 'url('+ content.image +')'}")
+      .custom-lower-section__section-right
+        .custom-lower-section__section-textbox
+          .custom-lower-section__section-title
+            | {{ content.title }}
+          .custom-lower-section__section-body(v-html='content.body')
+            | {{ content.body }}
+            
+    .divider
+
+  

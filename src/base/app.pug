@@ -1,3 +1,7 @@
 #app
-  Navigation
+  NavDesktop
+  NavMobile
+  NavTrigger
   router-view
+  Modal(:props='this.$store.state.modalContent' v-if='this.$store.state.showModal')
+  FooterDesktop(:props='props.pages.footer')

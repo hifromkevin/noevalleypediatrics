@@ -1,0 +1,54 @@
+.custom-tag-section
+  float: left
+  background: $c4
+  padding: 6rem 2rem
+  width: 100%
+  &__container
+    @extend .container-fluid
+
+  &__button-box
+    display: block
+    float: left
+    width: 25%
+    text-align: center
+
+  &__button
+    border-bottom: 3px solid $c4
+    font-weight: 600
+    &:hover
+      border-bottom: 3px solid $c6
+
+    &.active
+      border-bottom: 3px solid $c6
+
+  &__nav
+    display: block
+    float: left
+    padding: 0 2rem 2rem
+    width: 100%
+
+  &__body
+    display: table-row
+
+  &__left,
+  &__right
+    display: table-cell
+    position: relative
+
+  &__left
+    width: 40%
+
+  &__right
+    padding: 1rem
+    width: 60%
+
+  &__image
+    position: absolute
+    top: 5%
+    right: 5%
+    bottom: 5%
+    left: 5%
+
+  .divider
+    margin-bottom: .5rem
+    height: 1px

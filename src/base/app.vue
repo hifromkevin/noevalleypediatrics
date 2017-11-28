@@ -2,11 +2,20 @@
 
 <script>
 // components
-import Navigation from 'components/navigation/navigation'
+import NavDesktop from 'components/Nav/Nav'
+import NavMobile from 'components/Nav/Nav-Mobile/Nav-Mobile'
+import NavTrigger from 'components/nav/custom-nav-trigger/custom-nav-trigger'
+import FooterDesktop from 'components/Footer/Footer'
+import Modal from 'components/custom/custom-modal-multitool/custom-modal-multitool'
 
 export default {
   created () {
     this.$store.dispatch('GET_PAGES')
+    this.$store.dispatch('VIEW_NAV', false)
+    this.$store.dispatch('VIEW_BODY', false)
+    this.$store.dispatch('VIEW_TYPES', 0)
+    this.$store.dispatch('VIEW_SHOWMODAL', false)
+    this.$store.dispatch('VIEW_MODALCONTENT', false)
   },
   computed: {
     props () {
@@ -14,7 +23,11 @@ export default {
     }
   },
   components: {
-    Navigation
+    NavDesktop,
+    NavMobile,
+    NavTrigger,
+    FooterDesktop,
+    Modal
   },
   name: 'app'
 }

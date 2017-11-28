@@ -1,0 +1,7 @@
+.hero
+  .hero__backgroundimage(:style="{ backgroundImage: 'url('+ props.backgroundimage +')'}")
+  .hero__text-box
+    .hero__title
+      | {{ props.title }}
+    .hero__subtext
+      | {{ props.subtext }}

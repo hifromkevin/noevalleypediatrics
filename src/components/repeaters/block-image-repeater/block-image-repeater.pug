@@ -1,0 +1,4 @@
+.block-repeater
+  .block-repeater__container(v-if='this.$store.state')
+    .block-repeater__item(v-for='(item, i) in props.repeater', @click='switchHighlight(i)')
+      .block-repeater__background(:style="{ backgroundImage: 'url('+ item.image +')'}", ref='child', :class="{ active: i === types }")

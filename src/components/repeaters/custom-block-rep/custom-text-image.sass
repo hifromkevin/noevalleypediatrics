@@ -1,0 +1,46 @@
+.custom-lower-section
+  float: left
+  background: $c4
+  padding: 2rem 0
+  &__section
+    display: table-row
+
+  &__section-left
+    display: table-cell
+    position: relative
+    width: 50%
+
+  &__section-background
+    position: absolute
+    top: 5%
+    right: 5%
+    bottom: 5%
+    left: 25%
+    background-repeat: no-repeat
+    background-position: top
+    background-size: cover
+
+  &__section-right
+    display: table-cell
+    padding: 2rem 0
+    width: 50%
+
+  &__section-textbox
+    width: 80%
+
+  &__section-title
+    display: block
+    margin: auto
+
+  &__section-body
+    display: block
+    margin: auto
+    width: 100%
+
+  &__header
+    @extend .container-fluid
+    text-align: center
+
+  &__section-title
+    margin-bottom: 1rem
+    font-weight: 600

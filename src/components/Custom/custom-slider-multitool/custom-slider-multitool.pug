@@ -1,0 +1,10 @@
+.slider(v-if='props')
+  Slider(height="100%" width="100%" style='z-index: 9; margin: auto;', :auto='false')
+    SliderItem(v-for="(i, index) in list", :key="index")
+      .slider-real(:style="{ backgroundImage: 'url('+ i.backgroundimage +')' }")
+      .slider-real__title
+        | {{ i.title }}
+      .slider-real__body
+        | {{ i.body }}
+      .slider-real__author
+        | {{ i.name }}

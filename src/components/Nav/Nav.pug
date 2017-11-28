@@ -1,0 +1,13 @@
+.nav
+  .nav__bg
+    .nav__container
+      .nav__logo
+        router-link(to='/')
+          Icon(name='logo')
+            
+      .nav__links
+        .nav__link(v-for='link in links')
+          router-link(:to='link.path' v-if='link.name !== "page-not-found" && link.name != "home"')
+            .nav__link-text 
+            | {{ link.name }}
+ 
