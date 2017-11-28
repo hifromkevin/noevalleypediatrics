@@ -1,4 +1,4 @@
-<template lang='pug' src='./block-image-repeater.pug'></template>
+<template lang='pug' src='./repeater-image-selector.pug'></template>
 
 <script>
 import Icon from 'components/icon/icon'

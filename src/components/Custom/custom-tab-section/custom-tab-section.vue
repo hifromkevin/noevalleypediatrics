@@ -1,4 +1,4 @@
-<template lang='pug' src='./custom-tag-section.pug'></template>
+<template lang='pug' src='./custom-tab-section.pug'></template>
 
 <script>
 import Icon from 'components/icon/icon'

@@ -1,4 +1,4 @@
-<template lang="pug" src="./custom-modal-text.pug"></template>
+<template lang="pug" src="./custom-modal-multitool.pug"></template>
 
 <script>
 import Icon from 'components/icon/icon'
