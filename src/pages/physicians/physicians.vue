@@ -1,13 +1,13 @@
-<template lang='pug' src='./treatments.pug'></template>
+<template lang='pug' src='./physicians.pug'></template>
 
 <script>
 import Loader from 'components/loader/loader'
 
 export default {
-  name: 'treatments',
+  name: 'physicians',
   computed: {
     props () {
-      return this.$store.state.pages.treatments
+      return this.$store.state.pages['physicians']
     },
     loading () {
       return this.$store.state.loading

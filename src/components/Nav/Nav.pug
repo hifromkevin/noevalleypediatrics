@@ -1,13 +1,13 @@
-.nav
+.nav(v-if="props")
   .nav__bg
+    NavTop(:props="props.acf")
     .nav__container
       .nav__logo
         router-link(to='/')
-          Icon(name='logo')
-            
+          .nav__logo-background(:style="{ backgroundImage: 'url(' + props.acf.background_image + ')' }")
+
       .nav__links
         .nav__link(v-for='link in links')
-          router-link(:to='link.path' v-if='link.name !== "page-not-found" && link.name != "home"')
+          router-link(:to='link.path' v-if='link.name !== "page-not-found" && link.name != "Home"')
             .nav__link-text 
             | {{ link.name }}
- 

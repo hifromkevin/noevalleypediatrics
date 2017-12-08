@@ -1,5 +1,5 @@
 export function relativePath (value) {
-  const apiRoot = 'http://mastroianni.roostertest3.com'
+  const apiRoot = 'http://noevalleypediatrics.hifromkevin.com'
   return value.replace(apiRoot, '')
 }
 

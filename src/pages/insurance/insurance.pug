@@ -1,0 +1,66 @@
+.pages-insurance
+	Loader(v-show='loading')
+	div(v-if='props')
+		pre {{ props }}
+	Hero(:props='props.acf.insurance_hero')
+	.pages-insurance__container
+		.row
+			.col-sm-3
+				h2.title 
+					| {{ props.acf.insurance_title_1a }}
+				h2.secondary-title
+					| {{ props.acf.insurance_title_1b }}
+			.col-sm-9(v-html='props.acf.insurance_content_1')
+				| {{ props.acf.insurance_content_1 }}
+		.questions_divider(:style="{ backgroundImage: 'url(' + props.acf.questions_background + ')' }")
+			.row
+				.col-sm-4.col-sm-offset-8
+					h2.title
+						| {{ props.acf.questions_title_1 }}
+					h2.title
+						| {{ props.acf.questions_title_2 }}
+					a(:href='props.acf.phone_link_1')
+						.phone
+							| {{ props.phone_1 }}
+					a(:href='props.acf.phone_link_2')
+						.phone
+							| {{ props.phone_2 }}
+					a(:href='props.acf.email_link_1')
+						.phone
+							| {{ props.email_link_1 }}
+		.row
+			.col-sm-3
+				h2.title 
+					| {{ props.acf.insurance_title_2a }}
+				h2.secondary-title
+					| {{ props.acf.insurance_title_2b }}
+			.col-sm-9(v-html='props.acf.insurance_content_1')
+				| {{ props.acf.insurance_content_2 }}
+		.row
+			.col-sm-3
+				h2.title 
+					| {{ props.acf.insurance_title_3a }}
+				h2.secondary-title
+					| {{ props.acf.insurance_title_3b }}
+			.col-sm-9(v-html='props.acf.insurance_content_1')
+				| {{ props.acf.insurance_content_3 }}
+		.questions_divider(:style="{ backgroundImage: 'url(' + props.acf.update_background_image + ')' }")
+			.row
+				.col-sm-3
+					h2.title 
+						| {{ props.acf.update_title_1 }}
+					h2.title
+						| {{ props.acf.update_title_2 }}
+				.col-sm-9(v-html='props.acf.insurance_content_1')
+					| {{ props.acf.insurance_content }}
+					a(:href='props.acf.update_link')
+						.phone
+							| {{ props.update_link_text }}
+		.row
+			.col-sm-3
+				h2.title 
+					| {{ props.acf.insurance_title_4a }}
+				h2.secondary-title
+					| {{ props.acf.insurance_title_4b }}
+			.col-sm-9(v-html='props.acf.insurance_content_1')
+				| {{ props.acf.insurance_content_4 }}

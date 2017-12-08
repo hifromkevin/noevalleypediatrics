@@ -1,0 +1,139 @@
+BUILD NOTES
+
+Glossary: 
+.pug - Structure for the page
+.sass - Style for the page
+.vue - Run the page
+
+
+build Folder
+	Magic
+
+config Folder
+	More Magic
+
+dist Folder
+	dist > index.html
+	<html> Boilerplate static
+
+	dist > index.php
+	<html> Boilerplate, php
+
+	dist > screenshot
+	Template photo on Wordpress
+
+node_modules Folder
+Libraries used to build website
+
+src Folder
+	src > assets
+	Fonts, icons, images, and loaders used for website. 
+
+	src > base
+			app.pug
+			Global components used on each webpage. EX: Header and footer.
+
+				Example:
+
+						#app
+						  NavDesktop(:props='props.pages.nav')
+						  NavMobile
+						  router-view
+						  Modal(:props='this.$store.state.modalContent' v-if='this.$store.state.showModal')
+						  FooterDesktop(:props='props.pages.footer')
+			
+			app.vue
+			Script to run components on all webpages. 
+
+				Example:
+
+						<template lang='pug' src='./app.pug'></template>
+
+						<script>
+						// components
+						import NavDesktop from 'components/Nav/Nav'
+						import NavMobile from 'components/Nav/Nav-Mobile/Nav-Mobile'
+						import FooterDesktop from 'components/Footer/Footer'
+						import Modal from 'components/custom/custom-modal-multitool/custom-modal-multitool'
+
+						export default {
+						  created () {
+						    this.$store.dispatch('GET_PAGES')
+						    this.$store.dispatch('VIEW_NAV', false)
+						    this.$store.dispatch('VIEW_BODY', false)
+						    this.$store.dispatch('VIEW_TYPES', 0)
+						    this.$store.dispatch('VIEW_SHOWMODAL', false)
+						    this.$store.dispatch('VIEW_MODALCONTENT', false)
+						  },
+						  computed: {
+						    props () {
+						      return this.$store.state
+						    }
+						  },
+						  components: {
+						    NavDesktop,
+						    NavMobile,
+						    FooterDesktop,
+						    Modal
+						  },
+						  name: 'app'
+						}
+						</script>
+
+						<-- styles have been moved to main.sass file -->
+						<style src='../main.sass' lang='sass'></style>
+
+	src > components
+	Components of a website that can be reused on website. Ex: Hero, Nav, and Footer.
+	Each component has a .pug (to build the component), .sass (to style the component), and .vue file (to run the component). 
+
+	src > pages
+	Each webpage for the website. EX: Home, About Us, Services, Contact. Each page must have a folder built, as well as a 404 page. Each folder must contain a .pug, .sass, and .vue file (EX: services.pug, services.sass, services.vue).
+
+	src > router
+	Where pages are routed to ensure they will appear on the website. 
+
+	src > sass
+			> base > base.sass
+			Body and * styling for entire website.
+
+			> units > units.scss
+			???????
+
+			> utilities
+			Add consistency to styling, such as fonts (typography.sass)
+
+			> vendors
+			Bootstrap styling and carousel styling for website. Variables are added for colors, since actual colors cannot be added to files.
+
+
+	src > shared
+			src > shared > api > api.js
+					This is where the URL for the site being built goes.
+							EX: For noevalleypediatrics Wordpress build: 
+
+									const api = '//noevalleypediatrics.hifromkevin.com/wp-json'
+									export default api
+
+			src  > shared > filters > filters.js
+			Creates a filter, such as how a phone number appears on website. 
+
+			src > shared > store
+			???????
+
+			src > shared > templates
+			Icons used on website, such as left and right arrows.
+
+	src > main.js
+
+	src > main.sass
+			Global .sass file
+
+static
+???????
+
+test
+???????
+
+tools
+???????

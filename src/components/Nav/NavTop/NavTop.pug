@@ -1,0 +1,10 @@
+.navtop
+	.navtop__container
+		a(:href='props.phone_link')
+			Icon(:name='props.phone_icon')
+			.phone
+				| {{ props.phone }}
+		a(:href='props.address_link')
+			Icon(:name='props.address_icon')
+			.address
+				| {{ props.address }}

@@ -1,20 +1,22 @@
-<template lang='pug' src='./contact-us.pug'></template>
+<template lang='pug' src='./insurance.pug'></template>
 
 <script>
 import Loader from 'components/loader/loader'
+import Hero from 'components/Hero/Hero'
 
 export default {
-  name: 'contact-us',
+  name: 'insurance',
   computed: {
     props () {
-      return this.$store.state.pages['contact-us']
+      return this.$store.state.pages['insurance']
     },
     loading () {
       return this.$store.state.loading
     }
   },
   components: {
-    Loader
+    Loader,
+    Hero
   }
 }
 </script>
