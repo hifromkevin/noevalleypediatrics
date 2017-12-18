@@ -1,0 +1,46 @@
+.pages-contact
+  Loader(v-show='loading')
+  div(v-if='props')
+    pre {{ props }}
+  Hero(:props='props.acf.hero')
+  .pages-contact__container
+    .row
+      .col-sm-4
+        img(:props='props.acf.doctor_photo_1')
+        h2.title
+          | {{ props.acf.doctor_first_1 }}
+        h2.secondary-title
+          | {{ props.acf.doctor_last_1 }}
+      .col-sm-8(v-html='props.acf.doctor_bio_1')
+        p
+          | {{ props.acf.doctor_bio_1 }}
+    .row
+      .col-sm-4
+        img(:props='props.acf.doctor_photo_1')
+        h2.title
+          | {{ props.acf.doctor_first_2 }}
+        h2.secondary-title
+          | {{ props.acf.doctor_last_2 }}
+      .col-sm-8(v-html='props.acf.doctor_bio_2')
+        p
+          | {{ props.acf.doctor_bio_2 }}
+    .row
+      .col-sm-4
+        img(:props='props.acf.doctor_photo_1')
+        h2.title
+          | {{ props.acf.doctor_first_3 }}
+        h2.secondary-title
+          | {{ props.acf.doctor_last_3 }}
+      .col-sm-8(v-html='props.acf.doctor_bio_3')
+        p
+          | {{ props.acf.doctor_bio_3 }}
+    .row
+      .col-sm-4
+        img(:props='props.acf.doctor_photo_1')
+        h2.title
+          | {{ props.acf.doctor_first_4 }}
+        h2.secondary-title
+          | {{ props.acf.doctor_last_4 }}
+      .col-sm-8(v-html='props.acf.doctor_bio_4')
+        p
+          | {{ props.acf.doctor_bio_4 }}

@@ -1,0 +1,37 @@
+.pages-contact
+  Loader(v-show='loading')
+  div(v-if='props')
+    pre {{ props }}
+  Hero(:props='props.acf.hero')
+  .pages-contact__container
+    .row
+      .col-sm-6
+        a(:href='props.acf.phone_link')
+          .phone
+            | {{ props.acf.phone_number }}
+        .fax
+          | {{ props.acf.fax_number }}
+        a(:href='props.acf.address_link')
+          .phone
+            | {{ props.acf.address }}
+        .col-sm-6
+          p
+            | Monday - Friday:
+            | Saturday:
+            | Sunday:
+        .col-sm-6
+          p
+            | {{ props.acf.m_-_f_hours }}
+            | {{ props.acf.saturday_hours }}
+            | {{ props.acf.sunday_hours }}
+      .col-sm-6
+        .map(v-html='props.acf.map')
+          | {{ props.acf.map }}
+    .row(v-html='props.acf.contact_text')
+      .col-sm-8.col-sm-offset-2
+        p
+          | {{ props.acf.contact_text }}
+        h2.secondary-title
+          | {{ props.acf.bulletin_bottom }}
+    .row(v-html='props.acf.contact_form')
+      | {{ props.acf.contact_form }}
