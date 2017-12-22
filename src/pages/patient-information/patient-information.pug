@@ -1,8 +1,9 @@
 .pages-information
   Loader(v-show='loading')
   div(v-if='props')
-    pre {{ props }}
+    //- pre {{ props }}
   Hero(:props='props.acf.insurance_hero')
+  .pages-information__hero(:style='{ backgroundImage: "url(" + props.acf.hero + ")" }')
   .pages-information__container
     .row
       .col-sm-3
@@ -12,7 +13,6 @@
           | {{ props.acf.title_1a }}
       .col-sm-9(v-html='props.acf.text_1')
         | {{ props.acf.text_1 }}
-
     .row
       .col-sm-3
         h2.title 

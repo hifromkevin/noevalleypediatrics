@@ -1,26 +1,29 @@
 .pages-home
 	Loader(v-show='loading')
 	div(v-if='props')
-		pre {{ props }} //This displays the props array
+		//pre {{ props }} //This displays the props array
 	Hero(:props='props.acf.hero')
+	.pages-home__hero(:style='{ backgroundImage: "url(" + props.acf.hero + ")" }')
 	.pages-home__container
-		.row
-			.col-sm-3
-				h2.title
-					| {{ props.acf.top_title }}
-				h2.secondary-title
-					| {{ props.acf.middle_title }}
-				h2.title
-					| {{ props.acf.bottom_title }}
-			.col-sm-9(v-html='props.acf.intro_text')
-				| {{ props.acf.intro_text }}
-		.row
-			.col-sm-3
-				h2.title
-					| {{ props.acf.bulletin_top }}
-				h2.secondary-title
-					| {{ props.acf.bulletin_bottom }}
-			.col-sm-9
-				p
-					| This is where the bulletins will go!
-					// Bulletins go here
+		.pages-home__welcome
+			.row
+				.col-sm-3
+					h2.title
+						| {{ props.acf.top_title }}
+					h2.secondary-title
+						| {{ props.acf.middle_title }}
+					h2.title
+						| {{ props.acf.bottom_title }}
+				.col-sm-9(v-html='props.acf.intro_text')
+					| {{ props.acf.intro_text }}
+		.pages-home__bulletin
+			.row
+				.col-sm-3
+					h2.title
+						| {{ props.acf.bulletin_top }}
+					h2.secondary-title
+						| {{ props.acf.bulletin_bottom }}
+				.col-sm-9
+					p
+						| This is where the bulletins will go!
+						// Bulletins go here
