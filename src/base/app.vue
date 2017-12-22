@@ -4,7 +4,6 @@
 // components
 import NavDesktop from 'components/Nav/Nav'
 import NavMobile from 'components/Nav/Nav-Mobile/Nav-Mobile'
-import NavTrigger from 'components/nav/custom-nav-trigger/custom-nav-trigger'
 import FooterDesktop from 'components/Footer/Footer'
 import Modal from 'components/custom/custom-modal-multitool/custom-modal-multitool'
 
@@ -25,7 +24,6 @@ export default {
   components: {
     NavDesktop,
     NavMobile,
-    NavTrigger,
     FooterDesktop,
     Modal
   },

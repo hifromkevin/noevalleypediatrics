@@ -1,9 +1,11 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '@/pages/home/home'
-import AboutUs from '@/pages/about-us/about-us'
-import GetStarted from '@/pages/get-started/get-started'
-import Treatments from '@/pages/treatments/treatments'
+import PatientInformation from '@/pages/patient-information/patient-information'
+import Insurance from '@/pages/insurance/insurance'
+import Resources from '@/pages/resources/resources'
+import Physicians from '@/pages/physicians/physicians'
+import PhotoGallery from '@/pages/photo-gallery/photo-gallery'
 import ContactUs from '@/pages/contact-us/contact-us'
 import PageNotFound from '@/pages/404/404'
 
@@ -14,23 +16,33 @@ const router = new VueRouter({
   routes: [
     {
       path: '/',
-      name: 'home',
+      name: 'Home',
       component: Home
     },
     {
-      path: '/about-us',
-      name: 'about-us',
-      component: AboutUs
+      path: '/patient-information',
+      name: 'Patient Information',
+      component: PatientInformation
     },
     {
-      path: '/get-started',
-      name: 'get started',
-      component: GetStarted
+      path: '/resources',
+      name: 'Resources',
+      component: Resources
     },
     {
-      path: '/treatments',
-      name: 'treatments',
-      component: Treatments
+      path: '/insurance',
+      name: 'Insurance',
+      component: Insurance
+    },
+    {
+      path: '/physicians',
+      name: 'Physicians',
+      component: Physicians
+    },
+    {
+      path: '/photo-gallery',
+      name: 'Photo Gallery',
+      component: PhotoGallery
     },
     {
       path: '/Contact-us',

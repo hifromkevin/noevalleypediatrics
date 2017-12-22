@@ -2,8 +2,10 @@
 
 <script>
 import Icon from 'components/icon/icon'
+import NavTop from 'components/Nav/NavTop/NavTop'
 
 export default {
+  props: ['props'],
   data () {
     return {
       isClicked: false
@@ -23,7 +25,8 @@ export default {
     }
   },
   components: {
-    Icon
+    Icon,
+    NavTop
   }
 }
 </script>
