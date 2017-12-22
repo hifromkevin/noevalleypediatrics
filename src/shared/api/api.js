@@ -1,3 +1,3 @@
-const api = '//noevalleypediatrics.hifromkevin.com/wp-json'
+const api = 'https://noevalleypediatrics.hifromkevin.com/wp-json'
 
 export default api

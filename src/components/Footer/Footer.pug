@@ -1,4 +1,13 @@
 .footer
+	.footer__top(:style='{ backgroundImage: "url(" + props.acf.top_background + ")" }')
+		.row
+			.col-sm-4.col-sm-offset-8
+				h2.title-foot
+					| {{ props.acf.top_title_1 }}
+				h2.secondary-title-foot
+					| {{ props.acf.top_title_2 }}
+				p(v-html='props.acf.top_info')
+					| {{ props.acf.top_info }}
 	.footer__left
 		.col-sm-3
 			|3700 24th Street

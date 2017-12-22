@@ -1,0 +1,47 @@
+.pages-information
+  Loader(v-show='loading')
+  div(v-if='props')
+    //- pre {{ props }}
+  Hero(:props='props.acf.insurance_hero')
+  .pages-information__hero(:style='{ backgroundImage: "url(" + props.acf.hero + ")" }')
+  .pages-information__container
+    .row
+      .col-sm-3
+        h2.title 
+          | {{ props.acf.title_1 }}
+        h2.secondary-title
+          | {{ props.acf.title_1a }}
+      .col-sm-9(v-html='props.acf.text_1')
+        | {{ props.acf.text_1 }}
+    .row
+      .col-sm-3
+        h2.title 
+          | {{ props.acf.title_2 }}
+        h2.secondary-title
+          | {{ props.acf.title_2a }}
+      .col-sm-9(v-html='props.acf.text_2')
+        | {{ props.acf.text_2 }}
+    .row
+      .col-sm-3
+        h2.title 
+          | {{ props.acf.title_3 }}
+        h2.secondary-title
+          | {{ props.acf.title_3a }}
+      .col-sm-9(v-html='props.acf.text_3')
+        | {{ props.acf.text_3 }}
+    .row
+      .col-sm-3
+        h2.title 
+          | {{ props.acf.title_4 }}
+        h2.secondary-title
+          | {{ props.acf.title_4a }}
+      .col-sm-9(v-html='props.acf.text_4')
+        | {{ props.acf.text_4 }}
+    .row
+      .col-sm-3
+        h2.title 
+          | {{ props.acf.title_5 }}
+        h2.secondary-title
+          | {{ props.acf.title_5a }}
+      .col-sm-9(v-html='props.acf.text_5')
+        | {{ props.acf.text_5 }}

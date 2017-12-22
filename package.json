@@ -120,5 +120,18 @@
     "last 2 versions",
     "not ie <= 8"
   ],
-  "false": {}
+  "false": {},
+  "main": ".eslintrc.js",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hifromkevin/noevalleypediatrics.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hifromkevin/noevalleypediatrics/issues"
+  },
+  "homepage": "https://github.com/hifromkevin/noevalleypediatrics#readme"
 }
