@@ -1,12 +1,13 @@
-.pages-contact
+.pages-physicians
   Loader(v-show='loading')
   div(v-if='props')
-    pre {{ props }}
+    //pre {{ props }}
   Hero(:props='props.acf.hero')
-  .pages-contact__container
-    .row
+  .pages-physicians__hero(:style='{ backgroundImage: "url(" + props.acf.hero + ")" }')
+  .pages-physicians__container
+    .row.bio
       .col-sm-4
-        img(:props='props.acf.doctor_photo_1')
+        img(:src='props.acf.doctor_photo_1')
         h2.title
           | {{ props.acf.doctor_first_1 }}
         h2.secondary-title
@@ -14,9 +15,9 @@
       .col-sm-8(v-html='props.acf.doctor_bio_1')
         p
           | {{ props.acf.doctor_bio_1 }}
-    .row
+    .row.bio
       .col-sm-4
-        img(:props='props.acf.doctor_photo_1')
+        img(:src='props.acf.doctor_photo_1')
         h2.title
           | {{ props.acf.doctor_first_2 }}
         h2.secondary-title
@@ -24,9 +25,9 @@
       .col-sm-8(v-html='props.acf.doctor_bio_2')
         p
           | {{ props.acf.doctor_bio_2 }}
-    .row
+    .row.bio
       .col-sm-4
-        img(:props='props.acf.doctor_photo_1')
+        img(:src='props.acf.doctor_photo_1')
         h2.title
           | {{ props.acf.doctor_first_3 }}
         h2.secondary-title
@@ -34,9 +35,9 @@
       .col-sm-8(v-html='props.acf.doctor_bio_3')
         p
           | {{ props.acf.doctor_bio_3 }}
-    .row
+    .row.bio
       .col-sm-4
-        img(:props='props.acf.doctor_photo_1')
+        img(:src='props.acf.doctor_photo_1')
         h2.title
           | {{ props.acf.doctor_first_4 }}
         h2.secondary-title
