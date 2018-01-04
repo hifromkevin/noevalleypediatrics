@@ -1,8 +1,9 @@
 .pages-resources
   Loader(v-show='loading')
   div(v-if='props')
-    pre {{ props }}
+    //pre {{ props }}
   Hero(:props='props.acf.insurance_hero')
+  .pages-resources__hero(:style='{ backgroundImage: "url(" + props.acf.hero + ")" }')
   .pages-resources__container
     .row
       .col-sm-3
