@@ -8,10 +8,15 @@
 					| {{ props.acf.top_title_2 }}
 				p(v-html='props.acf.top_info')
 					| {{ props.acf.top_info }}
-	.footer__left
-		.col-sm-3
-			|3700 24th Street
-			|San Francisco, CA 94114
-	.footer__right
-		.col-sm-3.col-sm-offset-3
-			| (415) 641-1019
+
+	.footer__bottom
+		.footer__left.col-sm-4
+			img.footer-logo(:src='props.acf.logo')
+			a.address(:href='props.acf.address_link')
+				p(v-html='props.acf.address')
+					| {{ props.acf.address }}
+		.footer__right.col-sm-5.col-sm-offset-3
+			h2
+				| (415) 641-1019
+			p(v-html='props.acf.hours')
+				| {{ props.acf.hours }}					

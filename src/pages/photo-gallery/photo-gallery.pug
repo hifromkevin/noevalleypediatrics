@@ -1,0 +1,12 @@
+.pages-gallery
+	Loader(v-show='loading')
+	div(v-if='props')
+		pre {{ props }}
+	.pages-gallery__hero(:style='{ backgroundImage: "url(" + props.acf.hero + ")" }')
+		.col-sm-3.col-sm-offset-8.hero-holder
+			h1.hero-title 
+				| {{ props.acf.hero_title }}
+			h1.hero-secondary
+				| {{ props.acf.hero_title_2 }}
+	p(v-html='props.content.rendered')
+		| {{ props.content.rendered }}

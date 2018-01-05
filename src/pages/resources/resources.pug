@@ -4,6 +4,11 @@
     //pre {{ props }}
   Hero(:props='props.acf.insurance_hero')
   .pages-resources__hero(:style='{ backgroundImage: "url(" + props.acf.hero + ")" }')
+    .col-sm-3.col-sm-offset-8.hero-holder
+      h1.hero-title 
+        | {{ props.acf.hero_title }}
+      h1.hero-secondary
+        | {{ props.acf.hero_title_2 }}
   .pages-resources__container
     .row
       .col-sm-3

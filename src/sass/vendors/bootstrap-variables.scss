@@ -14,7 +14,7 @@ $max-width: rem-calc(1235); // adjust to project
 //== Colors
 $c1: #ffffff;
 $c2: #567472; //NVP Green
-$c3: #0000ff;
+$c3: #000000;
 $c4: #f0f000;
 $c5: #f00f00;
 $c6: #f000f0;
@@ -59,8 +59,8 @@ $link-hover-decoration: none !default;
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif:  "Roboto", Helvetica, Arial, sans-serif !default;
-$font-family-sans-serif-option: "Roboto", Arial, sans-serif !default;
+$font-family-sans-serif:  "Lato", Helvetica, Arial, sans-serif !default;
+$font-family-sans-serif-option: "Lato", Arial, sans-serif !default;
 $font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;

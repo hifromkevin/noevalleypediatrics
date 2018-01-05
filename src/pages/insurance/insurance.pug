@@ -3,6 +3,11 @@
 	div(v-if='props')
 		//pre {{ props }}
 	.pages-insurance__hero(:style='{ backgroundImage: "url(" + props.acf.insurance_hero + ")" }')
+		.col-sm-3.col-sm-offset-8.hero-holder
+			h1.hero-title 
+				| {{ props.acf.hero_title }}
+			h1.hero-secondary
+				| {{ props.acf.hero_title_2 }}
 	.pages-insurance__container
 		.row
 			.col-sm-3

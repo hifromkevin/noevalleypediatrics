@@ -1,37 +1,34 @@
 .pages-contact
   Loader(v-show='loading')
   div(v-if='props')
-    pre {{ props }}
+    //pre {{ props }}
   Hero(:props='props.acf.hero')
+  .pages-contact__hero(:style='{ backgroundImage: "url(" + props.acf.hero + ")" }')
+    .col-sm-3.col-sm-offset-8.hero-holder
+      h1.hero-title 
+        | {{ props.acf.hero_title }}
+      h1.hero-secondary
+        | {{ props.acf.hero_title_2 }}
   .pages-contact__container
     .row
       .col-sm-6
-        a(:href='props.acf.phone_link')
-          .phone
-            | {{ props.acf.phone_number }}
+        h2
+          a.contact-phone(:href='props.acf.phone_link')
+            .phone(v-html='props.acf.phone_number')
+              | {{ props.acf.phone_number }}
         .fax
-          | {{ props.acf.fax_number }}
-        a(:href='props.acf.address_link')
-          .phone
+          | FAX: {{ props.acf.fax }}
+        a.contact-address(:href='props.acf.address_link')
+          .address(v-html='props.acf.address')
             | {{ props.acf.address }}
-        .col-sm-6
-          p
-            | Monday - Friday:
-            | Saturday:
-            | Sunday:
-        .col-sm-6
-          p
-            | {{ props.acf.m_-_f_hours }}
-            | {{ props.acf.saturday_hours }}
-            | {{ props.acf.sunday_hours }}
+        p(v-html='props.acf.hours')
+          | {{ props.acf.hours }}
       .col-sm-6
-        .map(v-html='props.acf.map')
-          | {{ props.acf.map }}
+        a(:href='props.acf.address_link')
+          img.map(:src='props.acf.map')
     .row(v-html='props.acf.contact_text')
-      .col-sm-8.col-sm-offset-2
+      .col-sm-6.col-sm-offset-3
         p
           | {{ props.acf.contact_text }}
-        h2.secondary-title
-          | {{ props.acf.bulletin_bottom }}
     .row(v-html='props.acf.contact_form')
       | {{ props.acf.contact_form }}
